@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="logo192.png" />
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+
+  <script src="js/ie-emulation-modes-warning.js"></script>
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <title>Dashboard</title>
+
+  <script>
+    window.onload = function () {
+
+      var chart = new CanvasJS.Chart("chartContainer", {
+        animationEnabled: true,
+        theme: "dark2", // "light1", "light2", "dark1", "dark2"
+        title: {
+          //text: "Top Oil Reserves"
+        },
+        axisY: {
+          title: "Reserves(MMbbl)"
+        },
+        data: [{
+          type: "column",
+          showInLegend: true,
+          legendMarkerColor: "grey",
+          legendText: "MMbbl = one million barrels",
+          dataPoints: [
+            { y: 300878, label: "Venezuela" },
+            { y: 266455, label: "Saudi" },
+            { y: 169709, label: "Canada" },
+            { y: 158400, label: "Iran" },
+            { y: 142503, label: "Iraq" },
+            { y: 101500, label: "Kuwait" },
+            { y: 97800, label: "UAE" },
+            { y: 80000, label: "Russia" }
+          ]
+        }]
+      });
+      chart.render();
+
+    }
+  </script>
+
+  <style>
+    #chartdiv {
+      width: 100%;
+      height: 250px;
+    }
+  </style>
+
+</head>
+
+<body style="padding: 0px;margin: 0px;background: #171a1f">
+  <noscript> You need to enable JavaScript to run this app. </noscript>
+  <div id="root"></div>
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+  <script src="js/holder.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="js/ie10-viewport-bug-workaround.js"></script>
+  <script src="js/canvasjs.min.js"></script>
+
+</body>
+
+</html>
